@@ -6,21 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Underfloor heating</title>
 
+    <link rel="preload" href="fonts/inter-v12-cyrillic_latin-500.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/inter-v12-cyrillic_latin-regular.woff2" as="font" crossorigin>
+
+
     <link rel="stylesheet" href="style/normalize.css" />
     <link rel="stylesheet" href="style/fonts.css" />
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/header.css" />
     <link rel="stylesheet" href="style/hero.css" />
-    <!-- <link rel="stylesheet" href="style/advantages.css" /> -->
+    <link rel="stylesheet" href="style/advantages.css" />
     <link rel="stylesheet" href="style/calc.css" />
     <link rel="stylesheet" href="style/footer.css" />
 
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+      href="style/swiper-bundle.min.css"
     />
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+    <script
+      src="js/swiper-bundle.min.js"
+      defer
+    ></script>
 
     <script src="js/script.js" defer></script>
   </head>
@@ -61,33 +68,33 @@
               <div class="hero__slider-wrapper swiper-wrapper">
                 <div class="swiper-slide">
                   <div
-                  class="hero__image"
-                  style="background-image: url('./img/hero__img_01.jpg')">
-                  </div>
+                    class="hero__image"
+                    style="background-image: url('./img/hero__img_01.jpg')"
+                  ></div>
                 </div>
                 <div class="swiper-slide">
                   <div
-                  class="hero__image"
-                  style="background-image: url('./img/hero__img_02.jpg')">
-                  </div>
+                    class="hero__image"
+                    style="background-image: url('./img/hero__img_02.jpg')"
+                  ></div>
                 </div>
                 <div class="swiper-slide">
                   <div
-                  class="hero__image"
-                  style="background-image: url('./img/hero__img_03.jpg')">
-                  </div>
+                    class="hero__image"
+                    style="background-image: url('./img/hero__img_03.jpg')"
+                  ></div>
                 </div>
                 <div class="swiper-slide">
                   <div
-                  class="hero__image"
-                  style="background-image: url('./img/hero__img_04.jpg')">
-                  </div>
+                    class="hero__image"
+                    style="background-image: url('./img/hero__img_04.jpg')"
+                  ></div>
                 </div>
                 <div class="swiper-slide">
                   <div
-                  class="hero__image"
-                  style="background-image: url('./img/hero__img_05.jpg')">
-                  </div>
+                    class="hero__image"
+                    style="background-image: url('./img/hero__img_05.jpg')"
+                  ></div>
                 </div>
               </div>
 
@@ -101,16 +108,18 @@
       </section>
 
       <section class="advantages section-offset">
-        <div class="container advantages__container">
-          <h2 class="title advantages__title">Наши преимущества</h2>
+        <div class="container">
+          <div class="advantages__container">
+            <h2 class="title advantages__title">Наши преимущества</h2>
 
-          <ul class="advantages__list list-reset">
-            <li class="advatages__item">Надежные материалы</li>
-            <li class="advatages__item">опытные монтажники</li>
-            <li class="advatages__item">Регулируемая температура пола</li>
-            <li class="advatages__item">Защита от замыканий</li>
-            <li class="advatages__item">Гарантия до 10 лет</li>
-          </ul>
+            <ul class="advantages__list list-reset">
+              <li class="advatages__item">Надежные материалы</li>
+              <li class="advatages__item">опытные монтажники</li>
+              <li class="advatages__item">Регулируемая температура пола</li>
+              <li class="advatages__item">Защита от замыканий</li>
+              <li class="advatages__item">Гарантия до 10 лет</li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -119,7 +128,7 @@
           <div class="calc__content gray-block">
             <h2 class="title calc__title">Рассчитайте стоимость</h2>
 
-            <form class="calc__form">
+            <form class="calc__form js-calc-form">
               <fieldset class="calc__fieldset calc__fieldset_size">
                 <label class="calc__wrapper-input calc__wrapper-input-size">
                   <span class="calc__text">Ширина помещения, м</span>
@@ -187,12 +196,12 @@
             <div class="calc__result-wrapper">
               <p class="calc__result">
                 <span class="calc__text">Площадь</span>
-                <span class="calc__result-text">35 кв м</span>
+                <span class="calc__result-text js-square">35 кв м</span>
               </p>
 
               <p class="calc__result">
                 <span class="calc__text">Примерная стоимость</span>
-                <span class="calc__result-text">42590 руб</span>
+                <span class="calc__result-text js-total-price">42590 руб</span>
               </p>
             </div>
           </div>
@@ -315,7 +324,12 @@
           </li>
           <li class="footer__item">
             Developer:
-            <a class="link footer__link" href="http://t.me/K_Nurakhmet" target="_blank">Nurakhmet</a>
+            <a
+              class="link footer__link"
+              href="http://t.me/K_Nurakhmet"
+              target="_blank"
+              >Nurakhmet</a
+            >
           </li>
         </ul>
       </div>
